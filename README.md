@@ -40,8 +40,8 @@ FlowSE/
 
 - **2️⃣ Download pretrained weights**
 
-  We provided pretrained weights and audio samples.
-
+  We provided pretrained weights <a href="https://huggingface.co/flowse/wenetspeech4tts_Premium.pt.tar"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-FlowSE-pink"></a>  and audio samples.
+  
 - **3️⃣ Inference example**
 
 
