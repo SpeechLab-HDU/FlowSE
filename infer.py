@@ -1,23 +1,25 @@
-import os
-import torch
-import soundfile as sf
-import torchaudio
-from vocos import Vocos
-from loader.datareader import DataReader
-import yaml
-import time
 import argparse
-from tqdm import tqdm
-from pathlib import Path
-import numpy as np
-EPS = np.finfo(float).eps
-import torch
-import librosa
-import scipy
-from model.model_utils import get_tokenizer
-from model import DiT,CFM
+import os
+import time
 import warnings
+from pathlib import Path
+
+import librosa
+import numpy as np
+import scipy
+import soundfile as sf
+import torch
+import torchaudio
+import yaml
+from tqdm import tqdm
+from vocos import Vocos
+
+from loader.datareader import DataReader
+from model import CFM, DiT
+from model.model_utils import get_tokenizer
+
 warnings.filterwarnings("ignore", category=FutureWarning)
+EPS = np.finfo(float).eps
 
 def load_vocoder(vocoder_name="vocos", is_local=False, local_path="", device=None, hf_cache_dir=None):
     if vocoder_name == "vocos":

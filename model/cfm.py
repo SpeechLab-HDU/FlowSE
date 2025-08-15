@@ -1,19 +1,19 @@
 from __future__ import annotations
-from model.model_utils import (
-    default,
-    exists,
-    list_str_to_idx,
-    list_str_to_tensor,
-)
-from modules import MelSpec
-from torchdiffeq import odeint
-from torch import nn
-import torch.nn.functional as F
-import torch
-from typing import Callable
-from random import random
-import sys
+
 import os
+import sys
+from random import random
+from typing import Callable
+
+import torch
+import torch.nn.functional as F
+from modules import MelSpec
+from torch import nn
+from torchdiffeq import odeint
+
+from model.model_utils import (default, exists, list_str_to_idx,
+                               list_str_to_tensor)
+
 sys.path.append(os.path.dirname(__file__))
 
 
